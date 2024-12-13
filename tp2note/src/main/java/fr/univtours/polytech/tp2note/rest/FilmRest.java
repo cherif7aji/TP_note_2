@@ -7,13 +7,16 @@ import java.util.List;
 import fr.univtours.polytech.tp2note.business.FilmBusiness;
 import fr.univtours.polytech.tp2note.models.FilmBean;
 import jakarta.ejb.EJB;
+import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
+import jakarta.ws.rs.HeaderParam;
 import jakarta.ws.rs.PATCH;
 import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
+import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
@@ -62,8 +65,12 @@ public class FilmRest {
 
     @PATCH
     @Path("films/{id}")
-    public Response partialUpdateFilm(@PathParam("id") Integer idFilm, FilmBean filmBean) {
+    public Response partialUpdateFilm(@PathParam("id") Integer idFilm,@HeaderParam(HttpHeaders.AUTHORIZATION) String auth, FilmBean filmBean) {
         FilmBean odlFilmBean = this.filmBusiness.getFilm(idFilm);
+        if (!"42".equals(auth)) {
+            // Le client n'a pas le droit de faire cette action.
+            return Response.status(Status.UNAUTHORIZED).build();
+        } 
         if (null == odlFilmBean) {
             return Response.status(Status.NOT_FOUND).build();
         }
@@ -83,8 +90,12 @@ public class FilmRest {
 
     @PUT
     @Path("films/{id}")
-    public Response fullUpdateFilm(@PathParam("id") Integer idFilm, FilmBean filmBean) {
+    public Response fullUpdateFilm(@PathParam("id") Integer idFilm, FilmBean filmBean ,@HeaderParam(HttpHeaders.AUTHORIZATION) String auth) {
         FilmBean odlFilmBean = this.filmBusiness.getFilm(idFilm);
+        if (!"42".equals(auth)) {
+            // Le client n'a pas le droit de faire cette action.
+            return Response.status(Status.UNAUTHORIZED).build();
+        } 
         if (null == odlFilmBean) {
             return Response.status(Status.NOT_FOUND).build();
         }
@@ -94,5 +105,29 @@ public class FilmRest {
         odlFilmBean.setTitle(filmBean.getTitle());
         this.filmBusiness.updateFilm(odlFilmBean);
         return Response.status(Status.ACCEPTED).build();
+    }
+
+    @DELETE
+    @Path("films/{id}")
+    public Response deleteFilm(@PathParam("id") Integer idFilm,
+            @HeaderParam(HttpHeaders.AUTHORIZATION) String auth) {
+        System.out.println(auth);
+        if (!"42".equals(auth)) {
+            // Le client n'a pas le droit de faire cette action.
+            return Response.status(Status.UNAUTHORIZED).build();
+        } else {
+            // Le client à la droit de faire cette action.
+            // On vérifie que le logement existe dans la base de données.
+            FilmBean filmBean = this.filmBusiness.getFilm(idFilm);
+            if (null == filmBean) {
+                // La film n'existe pas. On renvoie un 404.
+                return Response.status(Status.NOT_FOUND).build();
+            } else {
+                // La film existe. On la supprime ...
+                this.filmBusiness.deleteFilm(idFilm);
+                // ... et on renvoie un 204 par exemple.
+                return Response.status(Status.NO_CONTENT).build();
+            }
+        }
     }
 }
