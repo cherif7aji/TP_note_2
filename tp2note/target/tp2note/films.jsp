@@ -32,11 +32,11 @@
                         <td><c:out value="${film.note}" /></td>
                         <td>
                             <!-- Envoi de l'ID comme attribut dans l'URL -->
-                            <a href="baisser?id=${film.id}">Baisser</a>
+                            <a href="baisser?id=${film.id}">-</a>
                         </td>
                         <td>
                             <!-- Envoi de l'ID comme attribut dans l'URL -->
-                            <a href="augmenter?id=${film.id}">Augmenter</a>
+                            <a href="augmenter?id=${film.id}">+</a>
                         </td>
                     </tr>
                 </c:forEach>
