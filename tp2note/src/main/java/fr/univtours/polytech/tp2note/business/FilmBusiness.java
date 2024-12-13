@@ -1,5 +1,10 @@
 package fr.univtours.polytech.tp2note.business;
 
-public class FilmBusiness {
+import java.util.List;
 
+import fr.univtours.polytech.tp2note.models.FilmBean;
+
+public interface FilmBusiness {
+List<FilmBean> getFilms();
+    
 }
