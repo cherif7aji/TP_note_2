@@ -1,3 +1,4 @@
+fr/univtours/polytech/tp2note/business/InformationsBusiness.class
 fr/univtours/polytech/tp2note/business/FilmBusiness.class
 fr/univtours/polytech/tp2note/business/InformationsBusiness.class
 fr/univtours/polytech/tp2note/models/FilmBean.class
@@ -11,9 +12,17 @@ fr/univtours/polytech/tp2note/models/films/Description.class
 fr/univtours/polytech/tp2note/business/FilmBusinessImpl.class
 fr/univtours/polytech/tp2note/rest/WebApp.class
 fr/univtours/polytech/tp2note/utils/DataBaseInitializer.class
+<<<<<<< HEAD
 fr/univtours/polytech/tp2note/controllers/FilmServlet.class
 fr/univtours/polytech/tp2note/business/InformationsBusinessImpl.class
 fr/univtours/polytech/tp2note/dao/InformationsDao.class
 fr/univtours/polytech/tp2note/models/films/WsFilmsResult.class
 fr/univtours/polytech/tp2note/dao/InformationsDaoImpl.class
+=======
+fr/univtours/polytech/tp2note/business/InformationsBusinessImpl.class
+fr/univtours/polytech/tp2note/controllers/FilmServlet.class
+fr/univtours/polytech/tp2note/dao/InformationsDao.class
+fr/univtours/polytech/tp2note/models/films/WsFilmsResult.class
+>>>>>>> refs/remotes/origin/main
 fr/univtours/polytech/tp2note/dao/FilmDao.class
+fr/univtours/polytech/tp2note/dao/InformationsDaoImpl.class

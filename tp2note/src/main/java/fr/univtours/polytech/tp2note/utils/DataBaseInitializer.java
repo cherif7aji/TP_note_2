@@ -19,12 +19,12 @@ public class DataBaseInitializer {
 
     @PostConstruct
     public void init() {
-        FilmBean bean3 = insertBeanInDB("The Godfather");
+        FilmBean bean3 = insertBeanInDB("Le parrain");
         filmBusiness.addFilm(bean3);
-        FilmBean bean2 = insertBeanInDB("The Godfather2", 2);
+        FilmBean bean2 = insertBeanInDB("Les cinquieme element", 2);
         filmBusiness.addFilm(bean2);
 
-        FilmBean bean1 = insertBeanInDB("The Godfather1", 1);
+        FilmBean bean1 = insertBeanInDB("Apocalypse Now", 1);
         filmBusiness.addFilm(bean1);
 
     }
