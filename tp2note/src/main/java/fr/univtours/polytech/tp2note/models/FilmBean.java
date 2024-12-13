@@ -18,14 +18,22 @@ public class FilmBean implements Serializable {
     private Integer id;
 
     
-    private int note;
+    private Integer note= null;
     private String title;
+
+    public void setId(int id){
+        this.id=id;
+    }
+
+    public int getId(){
+        return this.id;
+    }
 
     public void setNote(int note){
         this.note=note;
     }
     
-    public int getNote(){
+    public Integer getNote(){
         return this.note;
     }
 

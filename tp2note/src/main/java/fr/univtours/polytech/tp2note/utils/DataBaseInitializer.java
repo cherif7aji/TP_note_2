@@ -15,31 +15,40 @@ import jakarta.inject.Inject;
 public class DataBaseInitializer {
 
     @Inject
-	private FilmBusiness filmBusiness;
+    private FilmBusiness filmBusiness;
 
-	@PostConstruct
-	public void init() {
+    @PostConstruct
+    public void init() {
+        FilmBean bean3 = insertBeanInDB("The Godfather");
+        filmBusiness.addFilm(bean3);
+        FilmBean bean2 = insertBeanInDB("The Godfather2", 2);
+        filmBusiness.addFilm(bean2);
 
-		FilmBean bean2 = insertBeanInDB("The Godfather",2);
-		filmBusiness.addFilm(bean2);
+        FilmBean bean1 = insertBeanInDB("The Godfather1", 1);
+        filmBusiness.addFilm(bean1);
 
-        FilmBean bean1 = insertBeanInDB("The Godfather2",1);
-		filmBusiness.addFilm(bean1);
+    }
 
-	}
+    /**
+     * Permet d'insérer un enregistrement en BDD.
+     * 
+     * @param note
+     * @param title
+     */
+    private FilmBean insertBeanInDB(String title, int note) {
+        FilmBean bean = new FilmBean();
 
-	/**
-	 * Permet d'insérer un enregistrement en BDD.
-	 * 
-	 * @param note
-	 * @param title
-	 */
-	private FilmBean insertBeanInDB(String title, int note) {
-		FilmBean bean = new FilmBean();
+        bean.setNote(note);
+        bean.setTitle(title);
 
-		bean.setNote(note);
-		bean.setTitle(title);
+        return bean;
+    }
+    private FilmBean insertBeanInDB(String title) {
+        FilmBean bean = new FilmBean();
 
-		return bean;
-	}
+        
+        bean.setTitle(title);
+
+        return bean;
+    }
 }
