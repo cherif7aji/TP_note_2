@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /home/cherif/Desktop/Tpnote2/tp2note/src/main/java/fr/univtours/polytech/tp2note/dao/InformationsDaoImpl.java
 /home/cherif/Desktop/Tpnote2/tp2note/src/main/java/fr/univtours/polytech/tp2note/dao/InformationsDao.java
 /home/cherif/Desktop/Tpnote2/tp2note/src/main/java/fr/univtours/polytech/tp2note/business/InformationsBusinessImpl.java
@@ -11,6 +10,7 @@
 /home/cherif/Desktop/Tpnote2/tp2note/src/main/java/fr/univtours/polytech/tp2note/models/films/Description.java
 /home/cherif/Desktop/Tpnote2/tp2note/src/main/java/fr/univtours/polytech/tp2note/business/InformationsBusiness.java
 /home/cherif/Desktop/Tpnote2/tp2note/src/main/java/fr/univtours/polytech/tp2note/dao/FilmDaoImpl.java
+/home/cherif/Desktop/Tpnote2/tp2note/src/main/java/fr/univtours/polytech/tp2note/controllers/SearchInformationsServlet.java
 /home/cherif/Desktop/Tpnote2/tp2note/src/main/java/fr/univtours/polytech/tp2note/rest/FilmRest.java
 /home/cherif/Desktop/Tpnote2/tp2note/src/main/java/fr/univtours/polytech/tp2note/business/FilmBusiness.java
 /home/cherif/Desktop/Tpnote2/tp2note/src/main/java/fr/univtours/polytech/tp2note/JakartaRestConfiguration.java
@@ -18,24 +18,3 @@
 /home/cherif/Desktop/Tpnote2/tp2note/src/main/java/fr/univtours/polytech/tp2note/rest/WebApp.java
 /home/cherif/Desktop/Tpnote2/tp2note/src/main/java/fr/univtours/polytech/tp2note/controllers/AugmenterServlet.java
 /home/cherif/Desktop/Tpnote2/tp2note/src/main/java/fr/univtours/polytech/tp2note/resources/JakartaEE10Resource.java
-=======
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/utils/DataBaseInitializer.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/business/InformationsBusiness.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/dao/InformationsDaoImpl.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/controllers/FilmServlet.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/controllers/AugmenterServlet.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/rest/FilmRest.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/models/FilmBean.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/dao/InformationsDao.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/dao/FilmDaoImpl.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/business/InformationsBusinessImpl.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/business/FilmBusiness.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/dao/FilmDao.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/models/films/Description.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/models/films/WsFilmsResult.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/controllers/BaisserServlet.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/JakartaRestConfiguration.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/resources/JakartaEE10Resource.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/business/FilmBusinessImpl.java
-/home/taher/Desktop/TP_note_2/tp2note/src/main/java/fr/univtours/polytech/tp2note/rest/WebApp.java
->>>>>>> refs/remotes/origin/main
