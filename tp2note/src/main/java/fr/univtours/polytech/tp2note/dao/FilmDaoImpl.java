@@ -46,7 +46,16 @@ public class FilmDaoImpl implements FilmDao {
 
     @Override
     public FilmBean getFilm(Integer id) {
-        return em.find(FilmBean.class, id);
+        FilmBean filmBean = em.find(FilmBean.class, id);
+        List<Description> descriptions = informationsBusiness.searchTitles(filmBean.getTitle());
+        if (null != descriptions && descriptions.size() != 0) {
+            filmBean.setActors(descriptions.get(0).getActors());
+            filmBean.setYear(descriptions.get(0).getYear());
+            filmBean.setPicture(descriptions.get(0).getImgPoster());
+        }
+        return filmBean;
+
+
     }
 
     @Override
