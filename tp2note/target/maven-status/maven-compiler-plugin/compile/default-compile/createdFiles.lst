@@ -1,0 +1,9 @@
+fr/univtours/polytech/tp2note/business/FilmBusiness.class
+fr/univtours/polytech/tp2note/models/FilmBean.class
+fr/univtours/polytech/tp2note/resources/JakartaEE10Resource.class
+fr/univtours/polytech/tp2note/business/FilmBusinessImpl.class
+fr/univtours/polytech/tp2note/JakartaRestConfiguration.class
+fr/univtours/polytech/tp2note/utils/DataBaseInitializer.class
+fr/univtours/polytech/tp2note/controllers/FilmServlet.class
+fr/univtours/polytech/tp2note/dao/FilmDao.class
+fr/univtours/polytech/tp2note/dao/FilmDaoImpl.class

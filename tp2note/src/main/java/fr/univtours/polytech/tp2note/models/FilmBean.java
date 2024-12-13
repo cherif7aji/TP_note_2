@@ -17,7 +17,23 @@ public class FilmBean implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    
     private int note;
     private String title;
+
+    public void setNote(int note){
+        this.note=note;
+    }
     
+    public int getNote(){
+        return this.note;
+    }
+
+    public void setTitle(String title){
+        this.title=title;
+    }
+    
+    public String getTitle(){
+        return this.title;
+    }
 }
